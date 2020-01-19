@@ -1,3 +1,5 @@
+@file:Suppress("UnstableApiUsage")
+
 import com.jfrog.bintray.gradle.BintrayExtension
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.api.tasks.testing.logging.TestLogEvent
@@ -140,8 +142,8 @@ detekt {
     config.setFrom(file("../config/detekt/detekt.yml"))
 }
 
-val bintrayUser = findProperty("bintrayUser")?.toString() ?: System.getenv("BINTRAY_USER")
-val bintrayKey = findProperty("bintrayKey")?.toString() ?: System.getenv("BINTRAY_API_KEY")
+val bintrayUser: String? = findProperty("bintrayUser")?.toString() ?: System.getenv("BINTRAY_USER")
+val bintrayKey: String? = findProperty("bintrayKey")?.toString() ?: System.getenv("BINTRAY_API_KEY")
 val detektPublication = "DetektPublication"
 
 publishing {

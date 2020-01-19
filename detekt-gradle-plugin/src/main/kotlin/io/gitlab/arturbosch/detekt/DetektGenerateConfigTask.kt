@@ -1,3 +1,5 @@
+@file:Suppress("UnstableApiUsage")
+
 package io.gitlab.arturbosch.detekt
 
 import io.gitlab.arturbosch.detekt.DetektPlugin.Companion.CONFIG_DIR_NAME

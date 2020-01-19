@@ -1,16 +1,21 @@
+@file:Suppress("UnstableApiUsage")
+
 rootProject.name = "detekt"
-include("detekt-api",
+include(
+    "detekt-api",
     "detekt-core",
     "detekt-rules",
     "detekt-cli",
     "detekt-test",
     "detekt-sample-extensions",
     "detekt-generator",
-    "detekt-formatting")
+    "detekt-formatting"
+)
 
 includeBuild("detekt-gradle-plugin")
 
 pluginManagement {
+
     val artifactoryVersion: String by settings
     val bintrayVersion: String by settings
     val dokkaVersion: String by settings
